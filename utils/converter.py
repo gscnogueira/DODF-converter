@@ -3,7 +3,6 @@ import pandas as pd
 import json
 
 
-ERROS = 0
 def get_anotation(row):
     tab = 2*' '
     texto_rel = row.texto_rel
@@ -20,14 +19,13 @@ def get_anotation(row):
         else:
             start = texto_rel.index(texto_ent)
     except Exception as e:
-        global ERROS 
-        ERROS+=1
-        print('-'*10 + 'ERRO ' + str(ERROS) + '-'*10)
-        print("Erro:", e)
+        print('-'*10 + 'ERRO' + '-'*10)
+        print("Descrição:", e)
         print('id:', row.id_ato)
-        print('texto_rel:',repr( texto_rel ))
-        print('texto_ent:',repr( texto_ent ))
-        print('label:',label)
+        print('label:',label,end=2*'\n')
+        print('texto_rel:',repr( texto_rel ), end=2*'\n')
+        print('texto_ent:',repr( texto_ent ), end=2*'\n')
+        exit()
     end = start + len(texto_ent)
     anotation = f"""
           {{
