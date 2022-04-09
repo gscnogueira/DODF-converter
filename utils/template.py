@@ -10,12 +10,3 @@ def get_template(df):
     template = '\n'.join(( beg_template, labels, end_template ))
     return template
 
-
-
-if __name__ == "__main__":
-
-
-
-
-
-
