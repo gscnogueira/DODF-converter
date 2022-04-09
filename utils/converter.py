@@ -1,21 +1,29 @@
+import re
 import pandas as pd
 import json
 
 
 ERROS = 0
-
 def get_anotation(row, i):
     tab = 2*' '
     texto_rel = row.texto_rel
     texto_ent = row.texto_ent
     label = row.tipo_ent
     start = 0
+    date_pattern = re.compile('^data_')
+    is_date = (date_pattern.match(label) and len(texto_ent) < 3)
     try:
-        start = texto_rel.index(texto_ent)
-    except:
+        if is_date:
+            pattern = '\s' + texto_ent + '[\s|,|o]'
+            start = re.search(pattern, texto_rel).start()
+            start +=1
+        else:
+            start = texto_rel.index(texto_ent)
+    except Exception as e:
         global ERROS 
         ERROS+=1
         print('-'*10 + 'ERRO ' + str(ERROS) + '-'*10)
+        print("Erro:", e)
         print('id:', row.id_ato)
         print('texto_rel:',repr( texto_rel ))
         print('texto_ent:',repr( texto_ent ))
