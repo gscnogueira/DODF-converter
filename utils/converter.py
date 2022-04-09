@@ -4,7 +4,7 @@ import json
 
 
 ERROS = 0
-def get_anotation(row, i):
+def get_anotation(row):
     tab = 2*' '
     texto_rel = row.texto_rel
     texto_ent = row.texto_ent
@@ -31,7 +31,7 @@ def get_anotation(row, i):
     end = start + len(texto_ent)
     anotation = f"""
           {{
-            "id": "{row.id_ato + '-' + str(i)}",
+            "id": "{row.id_ent}",
             "from_name": "label",
             "to_name": "text",
             "type": "labels",
