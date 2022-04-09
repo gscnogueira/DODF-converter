@@ -50,7 +50,7 @@ def get_anotation(row, i):
 def gen_data(df):
     text = df.texto_rel.values[0]
     # print(text)
-    result = [get_anotation(row,i) for i, row in df.iterrows()  if row.tipo_ent != row.tipo_rel ]
+    result = [get_anotation(row) for _, row in df.iterrows()  if row.tipo_ent != row.tipo_rel ]
     result = ','.join(result)
     data = f'''
   {{
