@@ -12,16 +12,8 @@ def get_template(df):
 
 
 
-
-
 if __name__ == "__main__":
 
-    df = pd.read_csv("../../dodf_atos_pessoal_final_version.csv")
-    tipos_ato = df.tipo_rel.unique()
-    for tipo in tipos_ato:
-        print('-'*10 + tipo + '-'*10)
-        df_sub = df[df.tipo_rel ==  tipo]
-        print(get_template(df_sub))
 
 
 
