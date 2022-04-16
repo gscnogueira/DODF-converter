@@ -31,7 +31,7 @@ elif out_dir[-1] != '/':
     out_dir+='/'
     
 
-print(f"Converting data from '{path}'...")
+print(f"Converting data from '{df_file}'...")
 for tipo_ato in tqdm(tipos_ato):
 
     df_ato = df[df.tipo_rel ==  tipo_ato]
