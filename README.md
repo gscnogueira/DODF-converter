@@ -1,6 +1,6 @@
 # DODF Converter
 
-Tool created to convert data extracted from the Diário Oficial do Distrito Federal (DODF) by members of the KnEDLE project to the format supported by the data labeling tool [Label Studio](https://labelstud.io/).
+Tool created to convert data extracted from the Diário Oficial do Distrito Federal (DODF) by members of the KnEDLe project to the format supported by the data labeling tool [Label Studio](https://labelstud.io/).
 
 ## Supported Datasets
 
