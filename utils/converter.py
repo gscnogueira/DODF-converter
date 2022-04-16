@@ -31,7 +31,7 @@ def get_anotation(row):
             start = re.search(pattern, texto_rel).start()
             start +=1
         elif is_pagina:
-            pattern = '([pP]a[\s\-]+ginas?)|(pag\.?)'
+            pattern = '([pP]a[\s\-]?ginas?)|(pa?g\.?)|(p\.)'
             start = re.search(pattern, texto_rel).start()
             start = texto_rel.index(texto_ent, start)
         elif is_numero:
