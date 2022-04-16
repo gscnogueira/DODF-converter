@@ -35,7 +35,7 @@ def get_anotation(row):
             start = re.search(pattern, texto_rel).start()
             start = texto_rel.index(texto_ent, start)
         elif is_numero:
-            pattern = '(DODF)|(Edicao Extra)'
+            pattern = '(DO[\s]?DF)|(Edicao Extra)|(Diario Oficial)'
             start = re.search(pattern, texto_rel).end()
             start = texto_rel.index(texto_ent, start)
         else:
