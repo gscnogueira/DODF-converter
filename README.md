@@ -5,3 +5,10 @@ Tool created to convert data extracted from the Diário Oficial do Distrito Fede
 ## Supported Datasets
 
 - [Anotações de Atos de Pessoal](https://github.com/UnB-KnEDLe/datasets/blob/master/anotacoes_atos_de_pessoal.md)
+
+## Usage
+
+```
+usage: dodf-converter.py [-h] [--no-json] [-t] [-d OUTPUT_DIR] file
+```
+
