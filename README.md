@@ -12,3 +12,5 @@ Tool created to convert data extracted from the Diário Oficial do Distrito Fede
 usage: dodf-converter.py [-h] [--no-json] [-t] [-d OUTPUT_DIR] file
 ```
 
+![](./Images/usage.gif)
+
