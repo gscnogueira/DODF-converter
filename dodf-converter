@@ -19,7 +19,6 @@ parser.add_argument("-d", "--output-dir", help="directory to store output", defa
 parser.add_argument("file", help="path to dataset file")
 args = parser.parse_args()
 config = vars(args)
-print(config)
 
 df_file = config['file']
 out_dir = config['output_dir']
