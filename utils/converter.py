@@ -54,14 +54,12 @@ def get_anotation(row):
     end = start + len(texto_ent)
     anotation = f"""
           {{
-            "id": "{row.id_ent}",
             "from_name": "label",
             "to_name": "text",
             "type": "labels",
             "value": {{
               "start": {start},
               "end": {end},
-              "score": 1,
               "text": {json.dumps(texto_ent)},
               "labels": [
                 "{label}"
@@ -80,9 +78,8 @@ def gen_data(df):
     "data": {{
       "text": {json.dumps(text)}
     }},
-    "predictions": [
+    "annotations": [
       {{
-        "model_version": "Dados Anotados",
         "result": [{result}
         ]
       }}
